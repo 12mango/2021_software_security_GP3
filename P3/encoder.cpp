@@ -4,6 +4,7 @@
 #include<vector>
 #include<string>
 #include<fstream>
+#include<stdlib.h>
 using namespace std;
 
 vector<string> files;  //路径下的文件列表 
@@ -99,9 +100,9 @@ int main()
 
 	cout << self << endl;
 	//cout<<__FILE__<<endl;  
-	get_compiler_version()
+	get_compiler_version();
 
-		get_files(get_path());
+	get_files(get_path());
 
 	for (auto iter = files.cbegin();iter != files.end();++iter) {
 
@@ -136,5 +137,7 @@ int main()
 		cout << path << endl;
 		encode_or_decode(path, false);
 	}
+	
+	system("pause");
 
 }
